@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gamers Guild</title>
+  </head>
+  <body>
+    <header class="showcase">
+      <div class="showcase-top">
+        <img src="/images/logo.png" alt="Netflix">
+        <ul>
+            <li><a href="index.html" class="red hide-sm">Home</li>
+            <li><a href="#jod" class="hide-sm">Events</a></li>  
+            <li><a href="#loc" class="hide-sm">Location</a></li>
+            <li><a href="#about" class="hide-sm">About</a></li>
+            <!-- <li><a href="#footer" class="hide-sm">Contact Us</a></li> -->
+
+        </ul>
+        <a href="#" class="new-btn">Log In</a>
+    </div>
+
+      <div class="showcase-content">
+        <h1 data-speed="3" class="layer">Eat.Sleep.Game.Repeat</h1>
+        <p data-speed="-4" class="layer">Gaming content, events and communities that you care about.</p>
+        <a href="#" class="btn btn-xl">
+          Get Started <i class="fa fa-chevron-right btn-icon"></i>
+        </a>
+      </div>
+    </header>
+    <!-- ------------------ -->
+    <section id="jod">
+      <div class="events"><h1>Events</h1><h1>
+      </div>
+      <div class="container1">
+        <div class="card">
+            <div class="circle"></div>
+            <div class="content">
+                <h2>BGMI</h2>
+                <p>"Get ready to battle it out and determine the ultimate champion in the high-stakes BGMI Tournament." </p>
+                <a href="#">Register Now</a>
+            </div>
+            <img src="images/bgmi.png" alt="">
+        </div>
+
+        <div class="card">
+            <div class="circle"></div>
+            <div class="content"> 
+                <h2>PS Night</h2>
+                <p>"Experience the thrill of gaming at its finest with PS Night, the ultimate showcase of Playstation's latest and greatest titles."
+                </p>
+                <a href="#">Register Now</a>
+            </div>
+            <img src="images/pngwing.com (1).png" id="gow" alt="">
+        </div>
+
+        <div class="card">
+            <div class="circle"></div>
+            <div class="content">
+                <h2>Valorant</h2>
+                <p>"Join the competition and showcase your skills in the ultimate test of strategy and aim with the Valorant Tournament."</p>
+                <a href="#">Register Now</a>
+            </div>
+            <img src="images/valo.png" id="valo" alt="">
+        </div>
+    </div>
+</section>  
+
+<section class="location">
+    <div class="loc" id="loc">
+      <h1>Location</h1>
+      <img src="images/Rectangle.png" />
+    </div>
+
+    <div id="about">
+      <h2>About</h2>
+      <p>Gamers Guild is an online community for avid gamers, offering a platform for players to connect and compete in their favorite games. Our site features various sections dedicated to the latest news and updates in the gaming world, including reviews, tutorials, and discussion forums. Our community is comprised of passionate gamers from all over the globe, who come together to share their experiences, strategies, and skills. Whether you're a seasoned pro or just starting out, Gamers Guild has something for everyone. Join our growing community today and start your gaming journey with us!</p>
+    </div>
+  </section>
+    <!-- ------------------ -->
+
+    <div id="footer" class="bottom">
+      <div class="bottom-left">
+        <div class="bottom-logo">
+          <img src="images/gglogo.png" />
+        </div>
+        <div class="icon-set">
+          <i class="ri-twitter-fill ic"></i>
+          <i class="ri-facebook-circle-fill ic"></i>
+          <i class="ri-linkedin-box-fill ic"></i>
+          <i class="ri-instagram-fill ic"></i>
+          <i class="ri-youtube-fill ic"></i>
+        </div>
+      </div>
+      <div class="bottom-right">
+        <div class="br">
+          <h class="br-top">Quick Links</h>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+          <p>Affilites</p>
+        </div>
+
+        <div class="br">
+          <h class="br-top">Company</h>
+          <p>About Us</p>
+          <p>Blog</p>
+          <p>Career</p>
+        </div>
+
+        <div class="br" id="sup">
+          <h class="br-top">Support</h>
+          <p>Guides</p>
+          <p>Contact Us</p>
+          <p>FAQs</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("mousemove", parallax);
+      function parallax(e){
+          this.querySelectorAll('.layer').forEach(layer => {
+              const speed = layer.getAttribute('data-speed')
+
+              const x = (window.innerWidth - e.pageX*speed)/100
+              const y = (window.innerHeight - e.pageY*speed)/100
+
+              layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+          })
+      }
+  </script>
+
+    
+  </body>
+</html>
